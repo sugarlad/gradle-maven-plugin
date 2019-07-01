@@ -42,6 +42,7 @@ def addDependencies(pom) {
             dependencyNode.appendNode('groupId', dep.group)
             dependencyNode.appendNode('artifactId', dep.name)
             dependencyNode.appendNode('version', dep.version)
+            dependencyNode.appendNode('classifier', dep.version)
             dependencyNode.appendNode('scope', scope)
             if (!dep.transitive) {
                 // If this dependency is transitive, we should force exclude all its dependencies them from the POM
